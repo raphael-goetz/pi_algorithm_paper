@@ -5,6 +5,7 @@ def calculate_boundaries(n):
     v_inner = 4 * sqrt(2)  # Perimeter of the inscribed square
     v_outer = 8            # Perimeter of the circumscribed square
     vertices = 4           # Number of vertices (starting with a square)
+    radius = 1
 
     for iteration in range(n):
         # Double the number of vertices
@@ -15,8 +16,8 @@ def calculate_boundaries(n):
         v_outer = sqrt(v_inner * v_outer)                        # Geometric mean
 
     # Calculate the approximations for π
-    pi_inner = v_inner / 2  # Half the perimeter of the inscribed polygon
-    pi_outer = v_outer / 2  # Half the perimeter of the circumscribed polygon
+    pi_inner = v_inner / 2 / radius # Half the perimeter of the inscribed polygon
+    pi_outer = v_outer / 2 / radius # Half the perimeter of the circumscribed polygon
 
     # Print the results
     print(f'Inner bound: {pi_inner}')
@@ -28,4 +29,4 @@ def calculate_boundaries(n):
     print(f'Number of vertices: {vertices}')
 
 # Example usage
-calculate_boundaries(2)
+calculate_boundaries(200)

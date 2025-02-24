@@ -1,3 +1,7 @@
+"""
+In diesem File befindet sich nur die implementation des Algorythmus!
+"""
+
 def calculate_sequence(k):
     """
     Berechnet die Leibnitz Reihe für PI
@@ -9,11 +13,8 @@ def calculate_sequence(k):
         Approximiertes pi/4 (Summe der Reihe)
     """
     sum = 0
-    for index in range(0, k):
+    for index in range(k):
         sum += ((-1)**index)/(2*index + 1)
 
-    return sum
-
-sum = calculate_sequence(2000000)
-# Hier multipilitert mit 4 --> ergibt pi
-print(sum * 4)
+    # Wird hier mit 4 mulitipliziert da die Summe PI/4 ergibt und wir nur PI benötigen
+    return sum * 4
