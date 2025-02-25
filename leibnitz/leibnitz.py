@@ -1,5 +1,5 @@
 """
-In diesem File befindet sich nur die implementation des Algorythmus!
+In dieser Datei befindet sich nur die Implementation des Algorythmus!
 """
 
 def calculate_sequence(k):
